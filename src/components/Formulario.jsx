@@ -9,6 +9,7 @@ const InputSubmit = styled.input`
     border: none;
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 25px;
     padding: 10px;
     color: #fff;
     font-weight: 700;
@@ -23,7 +24,7 @@ const InputSubmit = styled.input`
     }
 `
 
-const Formulario = () => {
+const Formulario = ({setMonedas}) => {
 
     const [criptos, setCriptos] = useState([]);
     const [error, setError] = useState(false);
@@ -68,6 +69,11 @@ const Formulario = () => {
 
             return;
         }
+
+        setMonedas({
+            moneda,
+            criptomoneda
+        })
 
     }
 
